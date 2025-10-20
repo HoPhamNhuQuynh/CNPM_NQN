@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Tiki Fake Checker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h3>Tiki Fake Checker</h3>
+      <button id="checkBtn">Phân tích sản phẩm</button>
+    </div>
+
+    <div id="card" class="hidden">
+      <div class="row"><label>Tên sản phẩm:</label><div id="p_name" class="value">—</div></div>
+      <div class="row"><label>Giá:</label><div id="p_price" class="value">—</div></div>
+      <div class="row"><label>Seller:</label><div id="p_seller" class="value">—</div></div>
+      <div class="row"><label>Official / Authorized:</label><div id="p_official" class="value">—</div></div>
+      <div class="row"><label>Brand:</label><div id="p_brand" class="value">—</div></div>
+      <div class="row"><label>Rating trung bình:</label><div id="p_rating" class="value">—</div></div>
+      <div class="row"><label>Số đánh giá:</label><div id="p_review_count" class="value">—</div></div>
+      <div class="row"><label>Ảnh feedback (số lượng):</label><div id="p_review_images" class="value">—</div></div>
+      <div class="row"><label>URL sản phẩm:</label><div id="p_url" class="value small">—</div></div>
+      <div class="row"><label>Ghi chú:</label><div id="p_note" class="value small">—</div></div>
+<div class="row">
+  <label>Review:</label>
+  <div id="p_reviews" class="value" style="max-height:200px; overflow-y:auto;">—</div>
+</div>
+    </div>
+
+
+    <pre id="raw" class="hidden"></pre>
+
+    <div id="footer">
+      <small>Demo cá nhân — POC</small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
