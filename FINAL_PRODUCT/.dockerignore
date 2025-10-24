@@ -1,0 +1,5 @@
+.venv
+__pycache__
+*.pyc
+# Thêm các file logs nếu có
+*.log

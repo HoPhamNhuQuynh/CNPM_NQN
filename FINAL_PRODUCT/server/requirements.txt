@@ -1,0 +1,12 @@
+Flask
+flask-cors
+pandas
+numpy
+joblib
+requests
+unidecode
+pyvi
+playwright
+nest-asyncio
+gunicorn
+scikit-learn==1.6.1 
