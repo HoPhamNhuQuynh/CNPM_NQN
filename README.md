@@ -63,13 +63,15 @@ Cả hai mô hình AI đều sử dụng thuật toán từ thư viện **Scikit
 **Điểm Tổng hợp (Final Score)** được tính bằng công thức trung bình có trọng số, thang điểm từ 0 đến 100.
 
 
-final\_score =  int(review\_analysis\[“score”] \* 0.7 + price\_analysis\[“score”] * 0.3)
+final\_score =  int(review\_analysis\[“score”] \* 0.5 + seller\_analysis\[“score”] \* 0.3 + price\_analysis\[“score”] * 0.2 )
 
 Trong đó:
 
-70% trọng số đến từ Điểm phân tích dựa trên Review ( review\_analysis\[“score”])
+50% trọng số đến từ Điểm phân tích dựa trên Review ( review\_analysis\[“score”])
 
-30% trọng số đến từ Điểm phân tích Giá sản phẩm (price\_analysis\[“score”])
+30% trọng số đến từ Điểm phân tích dựa trên Hành vi người bán (seller\_analysis\[“score”])
+
+20% trọng số đến từ Điểm phân tích Giá sản phẩm (price\_analysis\[“score”])
 
 ### 4.1. Điểm phân tích dựa trên Review (Trọng số lớn nhất)
 
@@ -77,12 +79,12 @@ Trong đó:
 
 * **Đầu vào:** Tối đa 100 reviews (đã làm sạch dữ liệu).
 * **Chạy mô hình AI:**
-    * **Trust Model:** Xác định độ hài lòng/không hài lòng (chiếm 60% tổng điểm review).
-    * **Spam Model:** Lọc đánh giá giả mạo/spam (chiếm 40% tổng điểm review).
+    * **Trust Model:** Xác định độ hài lòng/không hài lòng (chiếm 20% tổng điểm review).
+    * **Spam Model:** Lọc đánh giá giả mạo/spam (chiếm 80% tổng điểm review).
 * **Công thức:** 
 **Tính điểm thành phần:**
 
- 		trust\_score\_part: 20%
+trust\_score\_part: 20%
 
 spam\_score\_part: 80%
 
@@ -102,7 +104,7 @@ spam\_score\_part: 80%
 | **Lượt theo dõi** | 5 | Điểm bonus cho lượt theo dõi cao. |
 | **TỔNG CỘNG** | **100** | Phản ánh uy tín được chứng thực và cam kết lâu dài của Shop. |
 
-### 4.3. Điểm phân tích dựa trên Giá sản phẩm (Trọng số 30%)
+### 4.3. Điểm phân tích dựa trên Giá sản phẩm (Trọng số 20%)
 
 **Mục tiêu:** Trả lời cho câu hỏi: *"Giá có hợp lý hay không so với giá chuẩn từ nhãn hàng?"*
 
