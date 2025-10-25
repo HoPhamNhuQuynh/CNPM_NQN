@@ -63,7 +63,7 @@ Cả hai mô hình AI đều sử dụng thuật toán từ thư viện **Scikit
 **Điểm Tổng hợp (Final Score)** được tính bằng công thức trung bình có trọng số, thang điểm từ 0 đến 100.
 
 
-final\_score =  int(review\_analysis\[“score”] \* 0.7 + price\_analysis\[“score”])
+final\_score =  int(review\_analysis\[“score”] \* 0.7 + price\_analysis\[“score”] * 0.3)
 
 Trong đó:
 
@@ -129,7 +129,9 @@ git clone <repo-url> FINAL_PRODUCT
 cd FINAL_PRODUCT
 ```
 **Bước 2: Tạo virtual environment và kích hoạt**
+```bash
 python -m venv .venv
+```
 
 # Windows
 ```bash
@@ -192,7 +194,7 @@ FINAL\_PRODUCT/
 
  		app.py				# File server Flask
 
-trust\_model.pkl		# Mô hình huấn luyện AI 1
+         trust\_model.pkl		# Mô hình huấn luyện AI 1
 
  		spam\_model.pkl		# Mô hình huấn luyện AI 2
 
